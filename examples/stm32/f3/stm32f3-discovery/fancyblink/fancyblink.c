@@ -25,7 +25,7 @@
 /* Set STM32 to 64 MHz. */
 void clock_setup(void)
 {
-	rcc_clock_setup_hsi(&hsi_8mhz[CLOCK_64MHZ]);
+	rcc_clock_setup_hsi(&hsi_8mhz[CLOCK_3V3_64MHZ]);
 
 	/* Enable GPIOE clock. */
 	rcc_peripheral_enable_clock(&RCC_AHBENR, RCC_AHBENR_IOPEEN);

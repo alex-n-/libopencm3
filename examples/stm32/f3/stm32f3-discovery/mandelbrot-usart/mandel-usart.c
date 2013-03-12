@@ -28,7 +28,7 @@
 void clock_setup(void)
 {
 	/* Enable high-speed clock at 64MHz */
-	rcc_clock_setup_hsi(&hsi_8mhz[CLOCK_64MHZ]);
+	rcc_clock_setup_hsi(&hsi_8mhz[CLOCK_3V3_64MHZ]);
 
 	/* Enable GPIOD clock for LED & USARTs. */
 	rcc_peripheral_enable_clock(&RCC_AHBENR, RCC_AHBENR_IOPEEN);

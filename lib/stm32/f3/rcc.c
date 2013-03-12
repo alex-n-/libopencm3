@@ -30,7 +30,7 @@
 u32 rcc_ppre1_frequency = 8000000;
 u32 rcc_ppre2_frequency = 8000000;
 
-const clock_scale_t hsi_8mhz[CLOCK_END] =
+const clock_scale_t hsi_8mhz[CLOCK_3V3_END] =
 {
 	{ /* 64MHz */
 	  .pll= RCC_CFGR_PLLMUL_PLL_IN_CLK_X11,
