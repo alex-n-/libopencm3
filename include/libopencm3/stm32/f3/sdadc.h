@@ -391,25 +391,29 @@
 /* RDATA : Injected group conversion data */
 #define  SDADC_RDATAR_RDATA		(0xFFFF << 0)
 
-/* --- SDADC_JDATA12R values ------------------------------------------------- */
+/* --- SDADC_JDATA12R values ----------------------------------------------- */
+
 /* JDATA1 : Injected group conversion data for SDADC2 */
 #define  SDADC_JDATA12R_JDATA2	(0xFFFF0000 << 0)
 /* JDATA2 : Injected group conversion data for SDADC1 */
 #define  SDADC_JDATA12R_JDATA1	(0x0000FFFF << 0)
 
-/* --- SDADC_RDATA12R values ------------------------------------------------- */
+/* --- SDADC_RDATA12R values ----------------------------------------------- */
+
 /* RDATA2 : Regular conversion data for SDADC2 */
 #define  SDADC_RDATA12R_RDATA2	(0xFFFF0000 << 0)
 /* RDATA1 : Regular conversion data for SDADC1 */
 #define  SDADC_RDATA12R_RDATA1	(0x0000FFFF << 0)
 
-/* --- SDADC_JDATA13R values ------------------------------------------------- */
+/* --- SDADC_JDATA13R values ----------------------------------------------- */
+
 /* JDATA3 : Injected group conversion data for SDADC3 */
 #define  SDADC_JDATA13R_JDATA3	(0xFFFF0000 << 0)
 /* JDATA1 : Injected group conversion data for SDADC1 */
 #define  SDADC_JDATA13R_JDATA1	(0x0000FFFF << 0)
 
-/* --- SDADC_RDATA13R values ------------------------------------------------- */
+/* --- SDADC_RDATA13R values ----------------------------------------------- */
+
 /* RDATA3 : Regular conversion data for SDADC3 */
 #define  SDADC_RDATA13R_RDATA3	(0xFFFF0000 << 0)
 /* RDATA1 : Regular conversion data for SDADC1 */
