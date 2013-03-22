@@ -22,15 +22,12 @@
 #ifndef LIBOPENCM3_PWR_F3_H
 #define LIBOPENCM3_PWR_F3_H
 
-//#include <libopencm3/stm32/pwr.h>
+#include <libopencm3/stm32/pwr.h>
 
 /*
  * This file extends the common STM32 version with definitions only
  * applicable to the STM32F3 series of devices.
  */
-
-#define PWR_CR				MMIO32(POWER_CONTROL_BASE + 0x00)
-#define PWR_CSR				MMIO32(POWER_CONTROL_BASE + 0x04)
 
 /* --- PWR_CR values ------------------------------------------------------- */
 
