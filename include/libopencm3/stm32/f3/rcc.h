@@ -170,6 +170,9 @@
 
 /* --- RCC_APB2RSTR values ------------------------------------------------- */
 
+#define RCC_APB2RSTR_SDAD3RST			(1 << 26)
+#define RCC_APB2RSTR_SDAD2RST			(1 << 25)
+#define RCC_APB2RSTR_SDAD1RST			(1 << 24)
 #define RCC_APB2RSTR_TIM17RST			(1 << 18)
 #define RCC_APB2RSTR_TIM16RST			(1 << 17)
 #define RCC_APB2RSTR_TIM15RST			(1 << 16)
@@ -214,6 +217,9 @@
 
 /* --- RCC_APB2ENR values ------------------------------------------------- */
 
+#define RCC_APB2ENR_SDADC3EN		(1 << 26)
+#define RCC_APB2ENR_SDADC2EN		(1 << 25)
+#define RCC_APB2ENR_SDADC1EN		(1 << 24)
 #define RCC_APB2ENR_TIM17EN			(1 << 18)
 #define RCC_APB2ENR_TIM16EN			(1 << 17)
 #define RCC_APB2ENR_TIM15EN			(1 << 16)
