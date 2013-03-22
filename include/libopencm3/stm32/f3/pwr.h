@@ -29,9 +29,15 @@
  * applicable to the STM32F3 series of devices.
  */
 
+#define PWR_CR				MMIO32(PWR_BASE + 0x00)
+#define PWR_CSR				MMIO32(PWR_BASE + 0x04)
+
 /* --- PWR_CR values ------------------------------------------------------- */
 
-/* Bits [31:10]: Reserved */
+/* Bits [31:12]: Reserved */
+#define PWR_CR_ENSD3		(1 << 11)
+#define PWR_CR_ENSD2		(1 << 10)
+#define PWR_CR_ENSD1		(1 << 9)
 #define PWR_CR_DBP			(1 << 8)
 /* Bits [7:5]: Reserved  PLS: PVD level selection. (Power Voltage Detector) */
 #define PWR_CR_PVDE			(1 << 4)
@@ -43,13 +49,14 @@
 
 /* --- PWR_CSR values ------------------------------------------------------ */
 
-/* Bits [31:10]: Reserved */
+/* Bits [31:11]: Reserved */
+#define PWR_CSR_EWUP3			(1 << 10)
 #define PWR_CSR_EWUP2			(1 << 9)
 #define PWR_CSR_EWUP1			(1 << 8)
 /* Bits [7:3]: Reserved */
 #define PWR_CSR_PVDO			(1 << 2)
-#define PWR_CSR_SBF			(1 << 1)
-#define PWR_CSR_WUF			(1 << 0)
+#define PWR_CSR_SBF				(1 << 1)
+#define PWR_CSR_WUF				(1 << 0)
 
 
 #endif
