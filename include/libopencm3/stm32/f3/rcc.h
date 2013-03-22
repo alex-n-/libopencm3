@@ -58,6 +58,12 @@
 #define RCC_CR_HSION				(1 << 0)
 
 /* --- RCC_CFGR values ----------------------------------------------------- */
+#define RCC_CFGR_SDPRE_MASK			(1F << 27)
+#define RCC_CFGR_SDPRE_0			(1F << 27)
+#define RCC_CFGR_SDPRE_1			(1F << 28)
+#define RCC_CFGR_SDPRE_2			(1F << 29)
+#define RCC_CFGR_SDPRE_3			(1F << 30)
+#define RCC_CFGR_SDPRE_4			(1F << 31)
 #define RCC_CFGR_MCOF				(1 << 28)
 #define RCC_CFGR_I2SSRC				(1 << 23)
 #define RCC_CFGR_USBPRES			(1 << 22)
