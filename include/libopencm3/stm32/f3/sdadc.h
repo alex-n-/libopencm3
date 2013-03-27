@@ -17,7 +17,8 @@
  * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
  
- 
+#include <libopencm3/cm3/common.h>
+
 #define SDADC1				SDADC1_BASE
 #define SDADC2				SDADC2_BASE
 #define SDADC3				SDADC3_BASE
@@ -419,10 +420,14 @@
 /* RDATA1 : Regular conversion data for SDADC1 */
 #define  SDADC_RDATA13R_RDATA1	(0x0000FFFF << 0)
 
+/* --- Function prototypes ------------------------------------------------- */
 
+BEGIN_DECLS
 
+void sdadc_enable(u32 sdadc);
+void sdadc_disable(u32 sdadc);
 
-
+END_DECLS
 
 
 
