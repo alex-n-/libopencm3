@@ -26,6 +26,11 @@ u32 sdadc_get_init_flag(u32 sdadc)
 	return(SDADC_ISR(sdadc) & SDADC_ISR_INITRDY);
 }
 
+u32 sdadc_get_calib_flag(u32 sdadc)
+{
+	return(SDADC_ISR(sdadc) & SDADC_ISR_EOCALF);
+}
+
 /* The reference voltage is common to the all SDADCs (SDADC1, SDADC2 and SDADC3). */
 void sdadc_set_vref(u32 sdadc, u32 vref)
 {
@@ -79,4 +84,9 @@ void sdadc_set_channel_config(u32 sdadc, u32 sdadc_channel, u32 sdadc_config)
 		reg32 &= ~SDADC_CONFCHR2_CONFCH8; /* clear bits */
 		SDADC_CONFCHR2(sdadc) |=  sdadc_config;
 	}
+}
+
+void sdadc_start_calibration(u32 sdadc)
+{
+	SDADC_CR2(sdadc) |= SDADC_CR2_STARTCALIB;
 }

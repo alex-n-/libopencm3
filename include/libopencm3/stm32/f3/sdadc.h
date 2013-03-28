@@ -430,7 +430,7 @@
 /* The reference voltage is forced internally to 1.8V VREFINT */
 #define SDADC_VREF_INT_1_8V		(SDADC_CR1_REFV_1)
 /* The reference voltage is forced internally to VDDA */
-#define SDADC_VREF_INT_VDD		(SDADC_CR1_REFV_0 | (SDADC_CR1_REFV_1)
+#define SDADC_VREF_INT_VDD		(SDADC_CR1_REFV_0 | SDADC_CR1_REFV_1)
 
 
 /* --- Function prototypes ------------------------------------------------- */
