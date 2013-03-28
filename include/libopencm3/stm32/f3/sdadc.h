@@ -202,7 +202,8 @@
 /* JSWSTART : Start a conversion of the injected group of channels */
 #define  SDADC_CR2_JSWSTART			(1 << 15)
 /* RCH : Regular channel selection */
-#define  SDADC_CR2_RCH				(15 << 16)
+#define  SDADC_CR2_RCH_SHIFT		16
+#define  SDADC_CR2_RCH_MASK			(15 << 16)
 /* RCH_0 : Regular channel selection bit 0 */
 #define  SDADC_CR2_RCH_0			(1 << 16)
 /* RCH_1 : Regular channel selection bit 1 */
@@ -419,6 +420,18 @@
 #define  SDADC_RDATA13R_RDATA3	(0xFFFF0000 << 0)
 /* RDATA1 : Regular conversion data for SDADC1 */
 #define  SDADC_RDATA13R_RDATA1	(0x0000FFFF << 0)
+
+/* --- Convenience defines ------------------------------------------------- */
+
+/* The reference voltage is forced externally using VREF pin */
+#define SDADC_VREF_EXT			0
+/* The reference voltage is forced internally to 1.22V VREFINT */
+#define SDADC_VREF_INT_1_22V	(SDADC_CR1_REFV_0)
+/* The reference voltage is forced internally to 1.8V VREFINT */
+#define SDADC_VREF_INT_1_8V		(SDADC_CR1_REFV_1)
+/* The reference voltage is forced internally to VDDA */
+#define SDADC_VREF_INT_VDD		(SDADC_CR1_REFV_0 | (SDADC_CR1_REFV_1)
+
 
 /* --- Function prototypes ------------------------------------------------- */
 
