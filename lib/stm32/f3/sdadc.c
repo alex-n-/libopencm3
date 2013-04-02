@@ -129,6 +129,86 @@ void sdadc_set_offset_conf0r(u32 sdadc, u32 offset)
 	SDADC_CONF0R(sdadc) = reg32;
 }
 
+void sdadc_set_gain_conf1r(u32 sdadc, u32 gain)
+{
+	u32 reg32;
+	
+	reg32 = SDADC_CONF1R(sdadc);
+	reg32 &= ~SDADC_CONF1R_GAIN1_MASK; /* clear bits */
+	reg32 |= gain;
+	SDADC_CONF1R(sdadc) = reg32;
+}
+
+void sdadc_set_common_conf1r(u32 sdadc, u32 common)
+{
+	u32 reg32;
+	
+	reg32 = SDADC_CONF1R(sdadc);
+	reg32 &= ~SDADC_CONF1R_COMMON1_MASK; /* clear bits */
+	reg32 |= common;
+	SDADC_CONF1R(sdadc) = reg32;
+}
+
+void sdadc_set_se_conf1r(u32 sdadc, u32 se)
+{
+	u32 reg32;
+	
+	reg32 = SDADC_CONF1R(sdadc);
+	reg32 &= ~SDADC_CONF1R_SE1_MASK; /* clear bits */
+	reg32 |= se;
+	SDADC_CONF1R(sdadc) = reg32;
+}
+
+void sdadc_set_offset_conf1r(u32 sdadc, u32 offset)
+{
+	u32 reg32;
+	
+	reg32 = SDADC_CONF1R(sdadc);
+	reg32 &= ~SDADC_CONF1R_OFFSET1_MASK; /* clear bits */
+	reg32 |= offset;
+	SDADC_CONF1R(sdadc) = reg32;
+}
+
+void sdadc_set_gain_conf2r(u32 sdadc, u32 gain)
+{
+	u32 reg32;
+	
+	reg32 = SDADC_CONF2R(sdadc);
+	reg32 &= ~SDADC_CONF2R_GAIN2_MASK; /* clear bits */
+	reg32 |= gain;
+	SDADC_CONF2R(sdadc) = reg32;
+}
+
+void sdadc_set_common_conf2r(u32 sdadc, u32 common)
+{
+	u32 reg32;
+	
+	reg32 = SDADC_CONF2R(sdadc);
+	reg32 &= ~SDADC_CONF2R_COMMON2_MASK; /* clear bits */
+	reg32 |= common;
+	SDADC_CONF2R(sdadc) = reg32;
+}
+
+void sdadc_set_se_conf2r(u32 sdadc, u32 se)
+{
+	u32 reg32;
+	
+	reg32 = SDADC_CONF2R(sdadc);
+	reg32 &= ~SDADC_CONF2R_SE2_MASK; /* clear bits */
+	reg32 |= se;
+	SDADC_CONF2R(sdadc) = reg32;
+}
+
+void sdadc_set_offset_conf2r(u32 sdadc, u32 offset)
+{
+	u32 reg32;
+	
+	reg32 = SDADC_CONF2R(sdadc);
+	reg32 &= ~SDADC_CONF2R_OFFSET2_MASK; /* clear bits */
+	reg32 |= offset;
+	SDADC_CONF2R(sdadc) = reg32;
+}
+
 
 
 

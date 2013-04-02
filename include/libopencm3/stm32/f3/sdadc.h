@@ -466,8 +466,31 @@
 
 BEGIN_DECLS
 
-void sdadc_enable(u32 sdadc);
-void sdadc_disable(u32 sdadc);
+void sdadc_on(u32 sdadc);
+void sdadc_off(u32 sdadc);
+void sdadc_init_enable(u32 sdadc);
+void sdadc_init_disable(u32 sdadc);
+u32 sdadc_get_init_flag(u32 sdadc);
+u32 sdadc_get_calib_flag(u32 sdadc);
+void sdadc_set_vref(u32 sdadc, u32 vref);
+void sdadc_start_conversion_regular(u32 sdadc);
+s16 sdadc_read_regular(u32 sdadc);
+void sdadc_regular_channel_select(u32 sdadc, u32 sdadc_channel);
+void sdadc_injected_sequence(u32 sdadc, u32 sdadc_channel_sequence);
+void sdadc_set_channel_config(u32 sdadc, u32 sdadc_channel, u32 sdadc_config);
+void sdadc_start_calibration(u32 sdadc);
+void sdadc_set_gain_conf0r(u32 sdadc, u32 gain);
+void sdadc_set_common_conf0r(u32 sdadc, u32 common);
+void sdadc_set_se_conf0r(u32 sdadc, u32 se);
+void sdadc_set_offset_conf0r(u32 sdadc, u32 offset);
+void sdadc_set_gain_conf1r(u32 sdadc, u32 gain);
+void sdadc_set_common_conf1r(u32 sdadc, u32 common);
+void sdadc_set_se_conf1r(u32 sdadc, u32 se);
+void sdadc_set_offset_conf1r(u32 sdadc, u32 offset);
+void sdadc_set_gain_conf2r(u32 sdadc, u32 gain);
+void sdadc_set_common_conf2r(u32 sdadc, u32 common);
+void sdadc_set_se_conf2r(u32 sdadc, u32 se);
+void sdadc_set_offset_conf2r(u32 sdadc, u32 offset);
 
 END_DECLS
 
