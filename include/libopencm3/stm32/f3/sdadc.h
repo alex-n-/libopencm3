@@ -432,6 +432,20 @@
 /* The reference voltage is forced internally to VDDA */
 #define SDADC_VREF_INT_VDD		(SDADC_CR1_REFV_0 | SDADC_CR1_REFV_1)
 
+/* Gain equal to 1 */
+#define SDADC_GAIN_1		0
+/* Gain equal to 2 */
+#define SDADC_GAIN_2		SDADC_CONF0R_GAIN0_0
+ /* Gain equal to 4 */
+#define SDADC_GAIN_4		SDADC_CONF0R_GAIN0_1
+/* Gain equal to 8 */
+#define SDADC_GAIN_8		(SDADC_CONF0R_GAIN0_1 | SDADC_CONF0R_GAIN0_0)
+/* Gain equal to 16 */
+#define SDADC_GAIN_16		SDADC_CONF0R_GAIN0_2
+ /* Gain equal to 32 */ 
+#define SDADC_GAIN_32		(SDADC_CONF0R_GAIN0_2 | SDADC_CONF0R_GAIN0_0)
+/* Gain equal to 1/2 */
+#define SDADC_GAIN_1_2		(SDADC_CONF0R_GAIN0_2 | SDADC_CONF0R_GAIN0_1 | SDADC_CONF0R_GAIN0_0)
 
 /* --- Function prototypes ------------------------------------------------- */
 

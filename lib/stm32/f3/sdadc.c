@@ -90,3 +90,22 @@ void sdadc_start_calibration(u32 sdadc)
 {
 	SDADC_CR2(sdadc) |= SDADC_CR2_STARTCALIB;
 }
+
+void sdadc_set_gain_conf0r(u32 sdadc, u32 gain)
+{
+	u32 reg32;
+	
+	reg32 = SDADC_CONF0R(sdadc);
+	reg32 &= ~SDADC_CONF0R_GAIN0_MASK; /* clear bits */
+	reg32 |= gain;
+	SDADC_CONF0R(sdadc) = reg32;
+}
+
+void sdadc_set_common_conf0r(u32 sdadc, u32 common)
+{
+
+}
+
+
+
+
