@@ -72,15 +72,13 @@ void sdadc_set_channel_config(u32 sdadc, u32 sdadc_channel, u32 sdadc_config)
 	u32 reg32;
 	u32 sdadc_channel_shift;
 	
-	if(sdadc_channel != 8)
-	{
+	if(sdadc_channel != 8) {
 		sdadc_channel_shift = sdadc_channel * 4;
 		reg32 = SDADC_CONFCHR1(sdadc);
 		reg32 &= ~(3 << sdadc_channel_shift); /* clear bits */
 		SDADC_CONFCHR1(sdadc) |= (sdadc_config << sdadc_channel_shift);
 	}
-	else
-	{
+	else {
 		reg32 &= ~SDADC_CONFCHR2_CONFCH8; /* clear bits */
 		SDADC_CONFCHR2(sdadc) |=  sdadc_config;
 	}
@@ -103,7 +101,32 @@ void sdadc_set_gain_conf0r(u32 sdadc, u32 gain)
 
 void sdadc_set_common_conf0r(u32 sdadc, u32 common)
 {
+	u32 reg32;
+	
+	reg32 = SDADC_CONF0R(sdadc);
+	reg32 &= ~SDADC_CONF0R_COMMON0_MASK; /* clear bits */
+	reg32 |= common;
+	SDADC_CONF0R(sdadc) = reg32;
+}
 
+void sdadc_set_se_conf0r(u32 sdadc, u32 se)
+{
+	u32 reg32;
+	
+	reg32 = SDADC_CONF0R(sdadc);
+	reg32 &= ~SDADC_CONF0R_SE0_MASK; /* clear bits */
+	reg32 |= se;
+	SDADC_CONF0R(sdadc) = reg32;
+}
+
+void sdadc_set_offset_conf0r(u32 sdadc, u32 offset)
+{
+	u32 reg32;
+	
+	reg32 = SDADC_CONF0R(sdadc);
+	reg32 &= ~SDADC_CONF0R_OFFSET0_MASK; /* clear bits */
+	reg32 |= offset;
+	SDADC_CONF0R(sdadc) = reg32;
 }
 
 

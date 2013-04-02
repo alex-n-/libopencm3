@@ -447,6 +447,21 @@
 /* Gain equal to 1/2 */
 #define SDADC_GAIN_1_2		(SDADC_CONF0R_GAIN0_2 | SDADC_CONF0R_GAIN0_1 | SDADC_CONF0R_GAIN0_0)
 
+/* Select SDADC VSSA as common mode */
+#define SDADC_COMMON_VSSA 		0
+/* Select SDADC VDDA/2 as common mode */
+#define SDADC_COMMON_VDDA_2		SDADC_CONF0R_COMMON0_0
+/* Select SDADC VDDA as common mode */
+#define SDADC_COMMON_VDDA		SDADC_CONF0R_COMMON0_1
+
+/* Conversions are executed in differential mode */
+#define SDADC_DIFFERENTIAL			0 
+/* Conversions are executed in single ended offset mode */
+#define SDADC_SINGLE_ENDED_OFFSET	SDADC_CONF0R_SE0_0
+/* Conversions are executed in single ended zero-volt reference mode */
+#define SDADC_SINGLE_ENDED_ZERO		(SDADC_CONF0R_SE0_1 | SDADC_CONF0R_SE0_0)
+
+
 /* --- Function prototypes ------------------------------------------------- */
 
 BEGIN_DECLS
