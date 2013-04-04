@@ -31,6 +31,11 @@ u32 sdadc_get_calib_flag(u32 sdadc)
 	return(SDADC_ISR(sdadc) & SDADC_ISR_EOCALF);
 }
 
+u32 sdadc_get_reocf_flag(u32 sdadc)
+{
+	return(SDADC_ISR(sdadc) & SDADC_ISR_REOCF);
+}
+
 /* The reference voltage is common to the all SDADCs (SDADC1, SDADC2 and SDADC3). */
 void sdadc_set_vref(u32 sdadc, u32 vref)
 {
