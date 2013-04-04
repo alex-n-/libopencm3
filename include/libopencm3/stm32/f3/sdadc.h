@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
- 
+
 #include <libopencm3/cm3/common.h>
 
 #define SDADC1				SDADC1_BASE
@@ -155,7 +155,7 @@
 /* SBI : Enter standby mode when idle */
 #define  SDADC_CR1_SBI			(1 << 11)
 /* PDI : Enter power down mode when idle */
-#define  SDADC_CR1_PDI			(1 << 12) 	/* !!! NOT DOCUMENTED IN MANUAL !!! */
+#define  SDADC_CR1_PDI			(1 << 12)	/* !!! NOT DOCUMENTED IN MANUAL !!! */
 /* JSYNC : Launch a injected conversion synchronously with SDADC1 */
 #define  SDADC_CR1_JSYNC		(1 << 14)
 /* RSYNC : Launch regular conversion synchronously with SDADC1 */
@@ -442,7 +442,7 @@
 #define SDADC_GAIN_8		(SDADC_CONF0R_GAIN0_1 | SDADC_CONF0R_GAIN0_0)
 /* Gain equal to 16 */
 #define SDADC_GAIN_16		SDADC_CONF0R_GAIN0_2
- /* Gain equal to 32 */ 
+ /* Gain equal to 32 */
 #define SDADC_GAIN_32		(SDADC_CONF0R_GAIN0_2 | SDADC_CONF0R_GAIN0_0)
 /* Gain equal to 1/2 */
 #define SDADC_GAIN_1_2		(SDADC_CONF0R_GAIN0_2 | SDADC_CONF0R_GAIN0_1 | SDADC_CONF0R_GAIN0_0)
@@ -455,17 +455,15 @@
 #define SDADC_COMMON_VDDA		SDADC_CONF0R_COMMON0_1
 
 /* Conversions are executed in differential mode */
-#define SDADC_DIFFERENTIAL			0 
+#define SDADC_DIFFERENTIAL			0
 /* Conversions are executed in single ended offset mode */
 #define SDADC_SINGLE_ENDED_OFFSET	SDADC_CONF0R_SE0_0
 /* Conversions are executed in single ended zero-volt reference mode */
 #define SDADC_SINGLE_ENDED_ZERO		(SDADC_CONF0R_SE0_1 | SDADC_CONF0R_SE0_0)
 
-
 /* --- Function prototypes ------------------------------------------------- */
 
-BEGIN_DECLS
-
+BEGIN_DECLS 
 void sdadc_on(u32 sdadc);
 void sdadc_off(u32 sdadc);
 void sdadc_init_enable(u32 sdadc);
@@ -493,20 +491,3 @@ void sdadc_set_se_conf2r(u32 sdadc, u32 se);
 void sdadc_set_offset_conf2r(u32 sdadc, u32 offset);
 
 END_DECLS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
